@@ -36,6 +36,4 @@ export PATH="$HOME/.cargo/bin:$PATH"
 PIPENV_VENV_IN_PROJECT=true
 export PIPENV_VENV_IN_PROJECT
 
-# get public ip address
-publicip="$(dig +short myip.opendns.com @resolver1.opendns.com)"
 
