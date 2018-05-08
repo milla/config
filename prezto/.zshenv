@@ -35,8 +35,3 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # pipenv shell now create .venv under project dir
 PIPENV_VENV_IN_PROJECT=true
 export PIPENV_VENV_IN_PROJECT
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 12bed12415e448839bbc9f8568cbec91353963ec
