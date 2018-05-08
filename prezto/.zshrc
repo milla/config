@@ -13,8 +13,12 @@ fi
 # Customize to your needs...
 
 # default editor
-export VISUAL=vim
+export VISUAL=nvim
 export EDITOR="${VISUAL}"
+
+# fix python error about locale
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # default user and host for prompt configuration
 export DEFAULT_USER=yuan
@@ -35,12 +39,6 @@ export DEFAULT_USER=yuan
 # }
 
 #
-# functions
-#
-
-ec() {emacsclient $@ &}
-
-#
 # aliases)
 #
 
@@ -53,31 +51,24 @@ alias ic="~/bin/invertcolor; ~/bin/invertcolor"
 # to print church paper
 alias chp="~/bin/churchpaper"
 
-alias bashprofile="vim ~/.bash_profile"
-alias zshrc="vim ~/.zshrc"
-alias zshenv="vim ~/.zshenv"
-alias preztorc="vim ~/.preztorc"
+alias bashprofile="ec ~/.bash_profile"
+alias zshrc="ec ~/.zshrc"
+alias zshenv="ec ~/.zshenv"
+alias preztorc="ec ~/.preztorc"
 
 # show/hide dotted files in finder
 alias showall="defaults write com.apple.finder AppleShowAllFiles YES; killall Finder"
 alias hidesome="defaults write com.apple.finder AppleShowAllFiles NO; killall Finder"
 
-alias startssh="ssh -D 8080 -p 10086 yuan@vpnserver &; echo 'ssh tunnel started on port 8080'"
-
 alias exhentai='open "https://exhentai.org/?page=1&f_doujinshi=on&f_manga=on&advsearch=1&f_search=Chinese+full+color&f_srdd=4&f_sname=on&f_stags=on&f_apply=Apply+Filter"'
 
-alias startrtags="cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1 .;rc -J"
-
-alias launchagents="open ~/Library/LaunchAgents/"
-
 alias startrpc="aria2c --rpc-secret=XF234567rc"
-
-alias pubip="echo $publicip"
 
 # prevent or enable creation of .DS_Store files
 alias disable-ds-store="defaults write com.apple.desktopservices DSDontWriteNetworkStores true"
 alias enable-ds-store="defaults write com.apple.desktopservices DSDontWriteNetworkStores false"
 alias remove-ds-store="find . -name '.DS_Store' -type f -delete"
 
-alias gc="git commit -a -m \"update\""
+alias f="fzf"
 
+alias ec="emacsclient -a emac"
