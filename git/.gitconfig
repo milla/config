@@ -1,7 +1,7 @@
 [user]
 	name = Yuan Fu
 	email = casouri@gmail.com
-        signingkey = 56E19BC57664A442
+        signingkey = 3F7BCFC91DD1388620335B9F1CF5ECABEC37A901
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
