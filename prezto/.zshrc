@@ -42,7 +42,6 @@ export DEFAULT_USER=yuan
 # aliases)
 #
 
-alias tr="trash"
 alias ac="aria2c"
 
 # for fixing color problem on screen
@@ -71,4 +70,5 @@ alias remove-ds-store="find . -name '.DS_Store' -type f -delete"
 
 alias f="fzf"
 
-alias ec="emacsclient -a emac"
+alias ec="emacsclient -a emacs"
+
